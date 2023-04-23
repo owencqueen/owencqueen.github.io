@@ -10,5 +10,5 @@ This page is currently a work in progress. In the meantime, you can find my publ
 {% include base_path %}
 
 {% for post in site.publications reversed %}
-  {% include archive-single.html %}
+  {% include paper-single.html %}
 {% endfor %}
