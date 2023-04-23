@@ -28,7 +28,7 @@
     
     <li> 
     <b>{{ title }}</b>
-      <i style="color:darkgrey"> {{post.venue}} </i> <br>
+      <i style="color:#71797E">, {{post.venue}}, {{post.year}} </i> <br>
     <p style="color:grey">{{post.author_list}}</p>          
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.short_text | markdownify | remove: '<p>' | remove: '</p>' }}<strong>
 <!--       <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color:#A9A9A9; text-decoration:none" > Read more</a> -->
