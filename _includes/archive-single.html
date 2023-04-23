@@ -34,7 +34,13 @@
       {% endif %}
     </h2> --->
     
-    <h3>{{ title }}</h3>
+    <h3 class="archive__item-title" itemprop="headline">
+        {{ title }}
+    </h3>
+    
+    {% if post.collection == 'publications' % }
+    
+    {% endif %}
     
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</p>
