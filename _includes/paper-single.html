@@ -28,6 +28,7 @@
     
     <li> 
     <b>{{ title }}</b>
+      <i style="color:darkgrey"> {{post.venue}} </i> <br>
     <p style="color:grey">{{post.author_list}}</p>          
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.short_text | markdownify | remove: '<p>' | remove: '</p>' }}<strong>
 <!--       <a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color:#A9A9A9; text-decoration:none" > Read more</a> -->
@@ -37,9 +38,9 @@
     {% if post.paperurl %}
       <a href="{{ post.paperurl }}"><i class="fas fa-fw fa-file-pdf zoom" aria-hidden="true"></i></a>
     {% endif %}
-<!--     {% if post.code %}
+    {% if post.code %}
       <a href="{{ post.code }}"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i></a>
-    {% endif %}         -->
+    {% endif %}        
     </strong></p></p>
     </li>
     
