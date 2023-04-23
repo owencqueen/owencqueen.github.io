@@ -30,7 +30,7 @@
     <b>{{ title }}</b> <br>
     <p style="color:grey">{{post.author_list}}</p>          
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.short_text | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink" style="color:#A9A9A9; text-decoration:none" > Read more</a>
-      {% if post.link %}
+    {% if post.link %}
       <a href="{{ post.link }}"><i class="fas fa-fw fa-link zoom" aria-hidden="true"></i></a>
     {% endif %}
     {% if post.paperurl %}
@@ -40,12 +40,7 @@
       <a href="{{ post.code }}"><i class="fas fa-fw fa-code zoom" aria-hidden="true"></i></a>
     {% endif %}         -->
     </strong></p></p>
-
-    {% endif %}
     </li>
-    {% endif %}
-    
-
     
   </article>
 </div>
