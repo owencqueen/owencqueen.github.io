@@ -7,4 +7,4 @@ redirect_from:
   - /resume
 ---
 
-You can find my CV here.
+You can find my CV [here](/files/Owen_Queen_CV.pdf).
