@@ -2,7 +2,7 @@
 title: "Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency"
 collection: publications
 permalink: /publication/timex
-date: 2023-06-03
+date: 2023-12-14
 year: 2023
 link: 'https://arxiv.org/abs/2306.02109'
 code: 'https://github.com/mims-harvard/TimeX'
