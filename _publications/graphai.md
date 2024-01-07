@@ -7,6 +7,6 @@ year: 2024
 link: 'https://arxiv.org/abs/2310.13767'
 venue: 'Annual Review of Biomedical Data Science'
 short_text: We present a review of previous work in graph machine learning to learn relational structures, provide greater interpretability, and integrate multiple modalities for biomedical data. We additionally identify future areas of focus for the field, in particular how foundation models on graphs can lead to clinically meaningful predictions and facilitate feedback loops with practitioners.
-author_list: Ruth Johnson, Michelle M. Li^*, Ayush Noori^*, <b>Owen Queen</b>^*, Marinka Zitnik
+author_list: Ruth Johnson, Michelle M. Li*, Ayush Noori*, <b>Owen Queen</b>*, Marinka Zitnik
 citation: 'None'
 ---
