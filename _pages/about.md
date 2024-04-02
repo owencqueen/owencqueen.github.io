@@ -7,9 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello! I am a research associate at Harvard Medical School in Biomedical Informatics, working with the [Zitnik Lab](https://zitniklab.hms.harvard.edu/).
-
-I plan to pursue a **Ph.D. starting in Fall 2024**, and I am actively searching for programs and opportunities that fit my interests. Feel free to reach out at [owencqueen@hotmail.com](mailto:owencqueen@hotmail.com). For more details on my background and research, refer to my [CV](https://owencqueen.github.io/files/Owen_Queen_CV.pdf).
+Hello! I am a research associate at Harvard Medical School in Biomedical Informatics, currently working with the [Zitnik Lab](https://zitniklab.hms.harvard.edu/). In Autumn 2024, I will be starting a PhD in the Stanford Computer Science department, working on building multimodal foundation models for structured scientific data.
 
 ## Bio
 I obtained my Bachelor's of Science from the University of Tennessee, Knoxville (UTK) in May 2022 with majors in computer science and mathematics and a minor in statistics. During my time at UTK, I was fortunate to work with several great teams, including the [Strickland Lab](https://www.christopherstrickland.info/), the [Maroulas Lab](https://sites.google.com/utk.edu/mrg), the [Vogiatzis Lab](https://vogiatzis.utk.edu/), and the [Emrich Lab](http://web.eecs.utk.edu/~semrich/). I am a recipient of the 2021 [Barry Goldwater Scholarship](https://goldwaterscholarship.gov/), and I was selected to present at the 2022 [Posters on the Hill](https://www.cur.org/what/events/students/poh/). Additionally, I am an alumnus of the [Summer Institute of Biomedical Informatics](https://dbmi.hms.harvard.edu/education/summer-institute-biomedical-informatics) at Harvard Medical School. 
