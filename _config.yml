@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Owen Queen"
   avatar           : "personal.png"
-  bio              : "Research Associate at Harvard Medical School, DBMI"
-  location         : "Boston, MA, USA"
+  bio              : "CS Graduate Student, Knight-Hennessy Scholar"
+  location         : "Stanford, CA, USA"
   employer         :
   # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=ID2aN3QAAAAJ&hl=en&oi=ao"
-  email            : owen_queen@hms.harvard.edu
+  email            : oqueen@stanford.edu
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
