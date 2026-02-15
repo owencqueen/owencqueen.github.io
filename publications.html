@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Publications — Owen Queen</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700&display=swap');
+
+        :root {
+            --bg: #f8f6f2;
+            --surface: #ffffff;
+            --ink: #1f2430;
+            --muted: #5b6472;
+            --accent: #2f6b70;
+            --line: #e5dfd4;
+            --pill: #efebe3;
+            --shadow: 0 12px 40px rgba(18, 30, 43, 0.06);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #1f5e64;
+            text-decoration: underline;
+            text-decoration-thickness: 1.5px;
+            text-underline-offset: 2px;
+            transition: color 0.2s ease, background 0.2s ease, text-decoration-thickness 0.2s ease;
+        }
+
+        a:hover {
+            color: #153f43;
+            text-decoration-thickness: 2px;
+        }
+
+        .container {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .topbar {
+            position: sticky;
+            top: 0;
+            background: rgba(248, 246, 242, 0.9);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+            z-index: 10;
+        }
+
+        .topbar .bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.25rem;
+            padding: 18px 0;
+        }
+
+        .brand {
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--ink);
+            padding: 6px 12px;
+            border-radius: 999px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: var(--pill);
+            color: var(--accent);
+        }
+
+        main {
+            padding: 72px 0 64px 0;
+        }
+
+        .section-heading {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.7rem;
+            color: var(--muted);
+            margin-bottom: 0.5rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+        }
+
+        h1 {
+            font-size: 2.3rem;
+        }
+
+        .publications-list {
+            display: grid;
+            gap: 1.25rem;
+        }
+
+        .publication {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .pub-main {
+            flex: 1;
+            display: grid;
+            gap: 0.35rem;
+        }
+
+        .pub-main p {
+            color: var(--muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .pub-venue {
+            font-size: 0.85rem;
+            color: var(--muted);
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .pub-authors .author-highlight {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .pub-note {
+            margin-top: 0.4rem;
+        }
+
+        .pub-note p {
+            font-size: 0.86rem;
+            line-height: 1.45;
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .pub-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.6rem;
+            flex-wrap: wrap;
+        }
+
+        .pub-links a {
+            border: 1px solid var(--line);
+            padding: 0.4rem 0.85rem;
+            border-radius: 10px;
+            background: #faf8f4;
+            color: var(--ink);
+            text-decoration: none;
+        }
+
+        .pub-thumb {
+            width: 120px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            display: block;
+        }
+
+        .pub-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        footer {
+            padding: 36px 0;
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        @media (max-width: 900px) {
+            main {
+                padding-top: 60px;
+            }
+
+            .section-heading {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .publication {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="topbar">
+        <div class="container bar">
+            <span class="brand">Owen Queen</span>
+            <nav>
+                <a href="/index.html">Home</a>
+                <a href="/index.html#publications">Selected</a>
+                <a href="/index.html#cv">CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">All work</p>
+                    <h1>All publications</h1>
+                </div>
+            </div>
+            <div class="publications-list">
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>ProCyon: A multimodal foundation model for protein phenotypes</h3>
+                    <p class="pub-authors">Owen Queen, Yepeng Huang, Robert Calef, Valentina Giunchiglia, Tianlong Chen, George Dasoulas, LeAnn Tai, Gianmarco Abbadessa, Owain Howell, Michelle M. Li, Yasha Ektefaie, Ayush Noori, Ildiko Farkas, Joseph Brown, Tom Cobley, Karin Hrovatin, Tom Hartvigsen, Fabian J. Theis, Bradley L. Pentelute, James Zou, Vikram Khurana, David Owen, Richard Nicholas, Manolis Kellis, Marinka Zitnik</p>
+                    <p class="pub-venue">bioRxiv · 2025</p>
+                    <div class="pub-note">
+                        <p>ProCyon is an 11B-parameter model that predicts and generates protein phenotypes across molecular and therapeutic scales, enabling transfer to poorly characterized proteins.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1">Paper</a>
+                    </div>
+                </div>
+                <a class="pub-thumb" href="https://www.biorxiv.org/content/10.1101/2024.12.10.627665v1"><img src="/content/publications/figures/queen2024procyon.png" alt="ProCyon: A multimodal foundation model for protein phenotypes thumbnail"></a>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>Graph AI in Medicine</h3>
+                    <p class="pub-authors">Ruth Johnson, Michelle M Li*, Ayush Noori*, Owen Queen*, Marinka Zitnik</p>
+                    <p class="pub-venue">Annual Review of Biomedical Data Science · 2024</p>
+                    <div class="pub-note">
+                        <p>We survey graph machine learning for biomedical applications, outlining how relational models and emerging foundation models can deliver clinically meaningful predictions.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-110723-024625">Paper</a>
+                    </div>
+                </div>
+                <a class="pub-thumb" href="https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-110723-024625"><img src="/images/publications/johnson2024graph.jpg" alt="Graph AI in Medicine thumbnail"></a>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency</h3>
+                    <p class="pub-authors">Owen Queen, Thomas Hartvigsen, Teddy Koker, Huan He, Theodoros Tsiligkaridis, Marinka Zitnik</p>
+                    <p class="pub-venue">Neural Information Processing Systems (NeurIPS) · 2023</p>
+                    <div class="pub-note">
+                        <p>TimeX learns interpretable surrogate masks that mirror predictor behavior through a novel consistency loss, delivering faithful explanations for time-series models.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2306.02109">Paper</a>
+                        <a href="https://github.com/mims-harvard/TimeX">Code</a>
+                    </div>
+                </div>
+                <a class="pub-thumb" href="https://arxiv.org/abs/2306.02109"><img src="/content/publications/figures/queen2023encoding.png" alt="Encoding Time-Series Explanations through Self-Supervised Model Behavior Consistency thumbnail"></a>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>Domain Adaptation for Time Series Under Feature and Label Shifts</h3>
+                    <p class="pub-authors">Huan He, Owen Queen, Teddy Koker, Consuelo Cuevas, Theodoros Tsiligkaridis, Marinka Zitnik</p>
+                    <p class="pub-venue">International Conference on Machine Learning (ICML) · 2023</p>
+                    <div class="pub-note">
+                        <p>RAINCOAT introduces a domain adaptation framework tailored to time series, achieving state-of-the-art performance even when shifts appear in both features and labels.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2302.03133">Paper</a>
+                        <a href="https://github.com/mims-harvard/Raincoat">Code</a>
+                    </div>
+                </div>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>Evaluating explainability for graph neural networks</h3>
+                    <p class="pub-authors">Chirag Agarwal*, Owen Queen*, Himabindu Lakkaraju, Marinka Zitnik</p>
+                    <p class="pub-venue">Scientific Data · 2023</p>
+                    <div class="pub-note">
+                        <p>GraphXAI benchmarks GNN explainers with new datasets, metrics, and evaluation flows that now inform tooling such as PyTorch Geometric.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://www.nature.com/articles/s41597-023-01974-x">Paper</a>
+                    </div>
+                </div>
+                <a class="pub-thumb" href="https://www.nature.com/articles/s41597-023-01974-x"><img src="/images/publications/agarwal2023evaluating.jpg" alt="Evaluating explainability for graph neural networks thumbnail"></a>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>Polymer graph neural networks for multitask property learning</h3>
+                    <p class="pub-authors">Owen Queen, Gavin A. McCarver, Saitheeraj Thatigotla, Brendan P. Abolins, Cameron L. Brown, Vasileios Maroulas, Konstantinos D. Vogiatzis</p>
+                    <p class="pub-venue">npj Computational Materials · 2023</p>
+                    <div class="pub-note">
+                        <p>We design a GNN architecture for polymer property prediction, achieving state-of-the-art performance and enabling high-throughput materials search.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://www.nature.com/articles/s41524-023-01034-3">Paper</a>
+                    </div>
+                </div>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>Protein Language Models for Explainable Fine-Grained Evolutionary Pattern Discovery</h3>
+                    <p class="pub-authors">Ashley Babjac*, Owen Queen*, Shawn-Patrick Barhorst, Kambiz Kalhor, Andrew D. Steen, Scott J. Emrich</p>
+                    <p class="pub-venue">2023 IEEE International Conference on Bioinformatics and Biomedicine (BIBM), DLBIBM Workshop · 2023</p>
+                    <div class="pub-note">
+                        <p>We fine-tune protein language models on microbial genomics data and pair them with structure-aware explanations to reveal functional differences between surface and subsurface proteins.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://github.com/owencqueen/DeepSurface">Code</a>
+                    </div>
+                </div>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>Deep Learning for Reference-Free Geolocation of Poplar Trees</h3>
+                    <p class="pub-authors">Cai W John*, Owen Queen*, Wellington Muchero, Scott J Emrich</p>
+                    <p class="pub-venue">NeurIPS 2022 AI for Science: Progress and Promises · 2022</p>
+                    <div class="pub-note">
+                        <p>Using motif-level genomic summaries, we predict poplar tree locations without full genome alignment, matching the performance of whole-genome approaches.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2301.13387">Paper</a>
+                        <a href="https://github.com/owencqueen/MashPredict">Code</a>
+                    </div>
+                </div>
+            </article>
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>LASSO-based feature selection for improved microbial and microbiome classification</h3>
+                    <p class="pub-authors">Owen Queen, Scott J Emrich</p>
+                    <p class="pub-venue">2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM) · 2021</p>
+                    <div class="pub-note">
+                        <p>LASSO-driven feature selection reliably identifies informative genomic features for sepsis prediction and environmental profiling in microbial datasets.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://ieeexplore.ieee.org/abstract/document/9669485">Paper</a>
+                    </div>
+                </div>
+            </article>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Generated from BibTeX + Markdown — automated build.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,34 @@
+name: Build Website
+
+on:
+  push:
+    paths:
+      - 'ref.bib'
+      - 'template.html'
+      - 'build.py'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Build website
+      run: |
+        python3 build.py
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add index.html
+        git commit -m "Auto-build website from BibTeX" || exit 0
+        git push 
