@@ -23,7 +23,6 @@ SECTION_FILES = {
 }
 PUBLICATION_ORDER_FILE = CONTENT_DIR / "publications_order.txt"
 SELECTED_PUBLICATIONS_FILE = CONTENT_DIR / "selected_publications.txt"
-SELECTED_PUBLICATIONS_LIMIT = 5
 NEWS_LIMIT = 8
 AUTHOR_HIGHLIGHT = "Owen Queen"
 
@@ -422,14 +421,7 @@ def build() -> None:
     if not selected_keys:
         selected_keys = order
 
-    selected_keys = [key for key in selected_keys if key in publications][:SELECTED_PUBLICATIONS_LIMIT]
-    if len(selected_keys) < SELECTED_PUBLICATIONS_LIMIT:
-        for key in order:
-            if key in selected_keys:
-                continue
-            selected_keys.append(key)
-            if len(selected_keys) == SELECTED_PUBLICATIONS_LIMIT:
-                break
+    selected_keys = [key for key in selected_keys if key in publications]
 
     selected_html = generate_publications_html(publications, selected_keys)
     all_html = generate_publications_html(publications, order)
