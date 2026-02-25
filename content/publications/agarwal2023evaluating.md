@@ -1,6 +1,5 @@
 ---
 {
-  "image": "/images/publications/agarwal2023evaluating.jpg",
   "image_link": "https://www.nature.com/articles/s41597-023-01974-x",
   "links": [
     {"label": "Paper", "url": "https://www.nature.com/articles/s41597-023-01974-x"}

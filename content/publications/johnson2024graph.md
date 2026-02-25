@@ -1,6 +1,5 @@
 ---
 {
-  "image": "/images/publications/johnson2024graph.jpg",
   "image_link": "https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-110723-024625",
   "links": [
     {"label": "Paper", "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-biodatasci-110723-024625"}

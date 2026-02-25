@@ -431,7 +431,19 @@ def build() -> None:
     selected_keys = [key for key in selected_keys if key in publications]
 
     selected_html = generate_publications_html(publications, selected_keys)
-    all_html = generate_publications_html(publications, order)
+    all_keys = sorted(
+        publications.keys(),
+        key=lambda key: (
+            -int(
+                re.search(r"\d{4}", str(publications[key].get("year", ""))).group(0)
+            )
+            if re.search(r"\d{4}", str(publications[key].get("year", "")))
+            else 0,
+            str(publications[key].get("title", "")).lower(),
+            key,
+        ),
+    )
+    all_html = generate_publications_html(publications, all_keys)
 
     template = (ROOT / "template.html").read_text(encoding="utf-8")
     for placeholder, html in sections.items():
