@@ -410,6 +410,13 @@ def build() -> None:
     sections = load_sections()
     publications = load_publications()
     order = load_publication_order() or sorted(publications.keys(), reverse=True)
+    # Keep manual ordering, but include any publication files not yet listed.
+    order = [key for key in order if key in publications]
+    missing_from_order = sorted(
+        [key for key in publications.keys() if key not in order],
+        reverse=True,
+    )
+    order.extend(missing_from_order)
 
     selected_keys: List[str] = []
     if SELECTED_PUBLICATIONS_FILE.exists():
