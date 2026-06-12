@@ -334,6 +334,7 @@
         .pub-thumb {
             width: 130px;
             flex-shrink: 0;
+            align-self: center;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--line);
@@ -484,6 +485,7 @@
                 </div>
                 <div class="news markdown">
                     <ul class="news-list">
+        <li><span class="news-date">May 2026</span><span class="news-text">Released a new preprint, <a href="https://arxiv.org/abs/2605.29192" target="_blank" rel="noopener noreferrer">ReasonOps</a>, on segmenting LLM reasoning traces into recurring reasoning operators 🧠</span></li>
         <li><span class="news-date">Dec 2025</span><span class="news-text">Our commentary on Agents4Science was published in Nature Biotechnology 🚀</span></li>
         <li><span class="news-date">Dec 2025</span><span class="news-text">Presented CGBench at NeurIPS!</span></li>
         <li><span class="news-date">Oct 2025</span><span class="news-text"><a href="https://agents4science.github.io/" target="_blank" rel="noopener noreferrer">Agents4Science 2025</a> was a success! Thanks to my co-organizers and our amazing participants! Stay tuned for next year 😉</span></li>
@@ -504,6 +506,20 @@
                     <a class="text-link" href="/publications.html">All publications →</a>
                 </div>
                 <div class="publications-list">
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>ReasonOps: Operator Segmentation for LLM Reasoning Traces</h3>
+                    <p class="pub-authors">Daniel Lee, Owen Queen, James Zou</p>
+                    <p class="pub-venue">arXiv preprint · 2026</p>
+                    <div class="pub-note">
+                        <p>ReasonOps is an annotation-free method that segments chain-of-thought traces into 7 recurring reasoning operators—discourse-level moves such as backtracking, inferring, and hypothesizing—that generalize across model families and benchmarks, enabling model identification, correctness estimation, and early quality assessment before a trace completes.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2605.29192">Paper</a>
+                    </div>
+                </div>
+                <a class="pub-thumb" href="https://arxiv.org/abs/2605.29192"><img src="/content/publications/figures/reason_ops.png" alt="ReasonOps: Operator Segmentation for LLM Reasoning Traces thumbnail"></a>
+            </article>
             <article class="publication">
                 <div class="pub-main">
                     <h3>CGBench: Benchmarking Language Model Scientific Reasoning for Clinical Genetics Research</h3>

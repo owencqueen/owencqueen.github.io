@@ -198,6 +198,7 @@
         .pub-thumb {
             width: 120px;
             flex-shrink: 0;
+            align-self: center;
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--line);
@@ -255,6 +256,20 @@
                 </div>
             </div>
             <div class="publications-list">
+            <article class="publication">
+                <div class="pub-main">
+                    <h3>ReasonOps: Operator Segmentation for LLM Reasoning Traces</h3>
+                    <p class="pub-authors">Daniel Lee, Owen Queen, James Zou</p>
+                    <p class="pub-venue">arXiv preprint · 2026</p>
+                    <div class="pub-note">
+                        <p>ReasonOps is an annotation-free method that segments chain-of-thought traces into 7 recurring reasoning operators—discourse-level moves such as backtracking, inferring, and hypothesizing—that generalize across model families and benchmarks, enabling model identification, correctness estimation, and early quality assessment before a trace completes.</p>
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://arxiv.org/abs/2605.29192">Paper</a>
+                    </div>
+                </div>
+                <a class="pub-thumb" href="https://arxiv.org/abs/2605.29192"><img src="/content/publications/figures/reason_ops.png" alt="ReasonOps: Operator Segmentation for LLM Reasoning Traces thumbnail"></a>
+            </article>
             <article class="publication">
                 <div class="pub-main">
                     <h3>CGBench: Benchmarking Language Model Scientific Reasoning for Clinical Genetics Research</h3>
